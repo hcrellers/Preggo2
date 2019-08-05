@@ -11,7 +11,7 @@ router.route('/add').post((req, res) => {
   const food = req.body.food;
   const calories = Number(req.body.calories);
   const meal = req.body.meal;
-  const date = Date.parse(req.body.date);
+  const date = Date(req.body.date);
 
   const newFood = new Food({
     food,
