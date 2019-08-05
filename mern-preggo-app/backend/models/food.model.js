@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const nutritionSchema = new Schema({
+const foodSchema = new Schema({
     food: {
         type: String,
         required: true
@@ -10,11 +10,6 @@ const nutritionSchema = new Schema({
     calories: {
         type: Number,
         max: 10000,
-        required: true
-    },
-    protein: {
-        type: Number,
-        max: 100,
         required: true
     },
     meal: {
@@ -25,8 +20,9 @@ const nutritionSchema = new Schema({
         type: Date,
         default: Date.now
     }
+    
 });
 
-const Nutrition = mongoose.model("Nutrition", mealSchema);
+const Food = mongoose.model("Food", foodSchema);
 
-module.exports = Nutrition;
+module.exports = Food;
