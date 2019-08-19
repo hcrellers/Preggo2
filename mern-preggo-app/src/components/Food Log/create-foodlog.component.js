@@ -16,8 +16,8 @@ const CreateFoodLog = () => {
     const getNutrition = async () => {
         const response = await fetch(`https://api.edamam.com/api/food-database/parser?nutrition-type=logging&ingr=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
         const data = await response.json();
-        console.log(data.hints[0].food.nutrients);
-        setNutrition(data.hints[0].food.nutrients);
+        console.log(data.hints);
+        setNutrition(data.hints);
     };
 
     const updateSearch = e => {
@@ -39,9 +39,17 @@ const CreateFoodLog = () => {
                  </button>
 
             </form>
-      {/* {nutrition.map(nutrients =>(  */}
-                <Nutrition />
-             {/* ))}   */}
+      {nutrition.map(nutrients =>( 
+                <Nutrition 
+                key={nutrients.food.label}
+                title={nutrients.food.label} 
+                calories={nutrients.food.nutrients.ENERC_KCAL}
+                protien={nutrients.food.nutrients.PROCNT}
+                fiber={nutrients.food.nutrients.FIBTG}
+                fat={nutrients.food.nutrients.FAT}
+                
+                />
+              ))} 
         </div>
     );
 };
