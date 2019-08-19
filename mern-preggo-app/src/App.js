@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from "./components/navbar.component"
 import FoodLogList from "./components/foodlog-list.component";
 import EditFoodLog from "./components/edit-foodlog.component";
-import CreateFoodLog from "./components/create-foodlog.component";
-import CreateUser from "./components/create-user.component";
+import CreateFoodLog from "./components/Food Log/create-foodlog.component";
+import CreateUser from "./components/Create User/create-user.component";
 
 function App() {
   return (

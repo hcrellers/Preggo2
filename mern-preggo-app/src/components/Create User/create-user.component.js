@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-
+import "./create-user.css";
 
 export default class CreateUser extends Component {
   constructor(props) {
