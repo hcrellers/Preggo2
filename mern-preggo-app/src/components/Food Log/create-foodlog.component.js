@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Nutrition from "./nutrition";
+import Nutrition from "./nutrition.component";
+import './create-foodlog.css'
 
 const CreateFoodLog = () => {
     const APP_ID = "799dea75";
     const APP_KEY = "e806ed0b36e74af63bf3578a2565f6ef";
 
     const [nutrition, setNutrition] = useState([]);
-    const [search, setSearch] = useState("");
-    const [query, setQuery] = useState('chicken')
+    const [search, setSearch] = useState('');
+    const [query, setQuery] = useState(' ');
 
-    useEffect( () => {
+    useEffect(() => {
         getNutrition();
     }, [query]);
 
@@ -23,6 +24,7 @@ const CreateFoodLog = () => {
     const updateSearch = e => {
         setSearch(e.target.value);
         // console.log(search);
+
     }
     const getSearch = e => {
         e.preventDefault();
@@ -39,17 +41,23 @@ const CreateFoodLog = () => {
                  </button>
 
             </form>
-      {nutrition.map(nutrients =>( 
-                <Nutrition 
-                key={nutrients.food.label}
-                title={nutrients.food.label} 
-                calories={nutrients.food.nutrients.ENERC_KCAL}
-                protien={nutrients.food.nutrients.PROCNT}
-                fiber={nutrients.food.nutrients.FIBTG}
-                fat={nutrients.food.nutrients.FAT}
+
+            <div className="results">
                 
-                />
-              ))} 
+                {nutrition.map(nutrients => (
+                    <Nutrition
+                        key={nutrients.food.label}
+                        title={nutrients.food.label}
+                        calories={nutrients.food.nutrients.ENERC_KCAL}
+                        protien={nutrients.food.nutrients.PROCNT}
+                        fiber={nutrients.food.nutrients.FIBTG}
+                        fat={nutrients.food.nutrients.FAT}
+                        />
+                        ))}
+                   
+              
+
+            </div>
         </div>
     );
 };

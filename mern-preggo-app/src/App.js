@@ -3,7 +3,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
-import Navbar from "./components/navbar.component"
+import Navbar from "./components/Navbar/navbar.component";
 import FoodLogList from "./components/foodlog-list.component";
 import EditFoodLog from "./components/edit-foodlog.component";
 import CreateFoodLog from "./components/Food Log/create-foodlog.component";

@@ -38,7 +38,8 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #007bff;
+  border-radius: 8px;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -95,4 +96,6 @@ button:hover {
   color: #61dafb;
 } */
 
-
+/* .navbar {
+  color: #0c5b64;
+} */
