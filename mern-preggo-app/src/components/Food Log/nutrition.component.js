@@ -7,18 +7,17 @@ const NutritionInfo = ({title,calories,carbs,protein,fiber,fat}) => {
         const  updateLog = e => {
             e.preventDefault();
         
-            axios.post('http://localhost:3000/create', NutritionInfo)
+            axios.post('http://localhost:3000/', NutritionInfo)
               .then(res => console.log(res.data));
         console.log(NutritionInfo)
             window.location = '/';
 
           };
 
-
-
-   
     return(
+      
         <div className="indiResults">
+          <form onSubmit={updateLog} className="submit-form">
             {/* <h1>Nutrition Information</h1> */}
             <h3>{title}</h3>
             <p>Calories: {calories}</p>
@@ -26,8 +25,9 @@ const NutritionInfo = ({title,calories,carbs,protein,fiber,fat}) => {
             <p>Protien: {protein}</p>
             <p>Fiber: {fiber}</p>
             <p>Fat: {fat}</p>
-            <button  onClick={updateLog} className="AddLog"> +
+            <button className="AddLog"> +
              </button>
+             </form>
         </div>
     );
 };

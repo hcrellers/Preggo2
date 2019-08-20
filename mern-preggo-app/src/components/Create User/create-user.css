@@ -1,10 +1,26 @@
-@media all and (min-width: 480px) {
-    .Login {
-      padding: 60px 0;
-    }
-  
-    .Login form {
-      margin: 0 auto;
-      max-width: 320px;
-    }
-  }
+.CreateFoodLog {
+  min-height: 100vh;
+  /* background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%); */
+}
+.form-group {
+  margin: 0 auto;
+  max-width: 520px;
+  padding: 20px;
+}
+
+.form-control {
+  width: 50%;
+  border: 0;
+  padding: 10px 20px;
+  color:white
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+ 
+}
+

@@ -1,62 +1,61 @@
-import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import "./create-user.css";
+import React, { Component } from 'react';
+import axios from 'axios';
+import './create-user.css'
 
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
 
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
-      email: "",
-      password: ""
-    };
+      username: ''
+    }
   }
 
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
-
-  handleChange = event => {
+  onChangeUsername(e) {
     this.setState({
-      [event.target.id]: event.target.value
-    });
+      username: e.target.value
+    })
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
+  onSubmit(e) {
+    e.preventDefault();
+
+    const user = {
+      username: this.state.username
+    }
+
+    console.log(user);
+
+    axios.post('http://localhost:5000/user', user)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      username: ''
+    })
   }
 
   render() {
     return (
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
+      <div>
+        <h3>Create New User</h3>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group"> 
+            <label>Username: </label>
+            <input  type="text"
+                required
+                className="form-control"
+                value={this.state.username}
+                onChange={this.onChangeUsername}
+                />
+          </div>
+          <div className="form-group">
+            <input type="submit" value="Create User" className="btn btn-primary" />
+          </div>
         </form>
       </div>
-    );
+    )
   }
 }
