@@ -5,9 +5,11 @@ export default class Button extends Component {
 
 render() {
     return(
-        <div
-            onClick={this.props.onClick}>
+        <div>
+         <button onClick={this.props.onClick}>
             {this.props.label}
+           </button>
+        
         </div>
     )
 }
