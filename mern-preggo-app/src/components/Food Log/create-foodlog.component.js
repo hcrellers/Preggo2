@@ -43,10 +43,10 @@ const CreateFoodLog = () => {
                 <Col size="sm-5">
                     <div className="CreateFoodLog">
                         <form onSubmit={getSearch} className="search-form">
-                            <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+                            <input className="search-bar" type="text"  placeholder="What did you eat today..." value={search} onChange={updateSearch} />
                             <button className="search-button" type="submit">
                                 Search
-                 </button>
+                             </button>
 
                         </form>
 
