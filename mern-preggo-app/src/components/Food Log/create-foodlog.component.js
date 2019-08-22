@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import Nutrition from "./nutrition.component";
 import './create-foodlog.css'
 import { Container, Row, Col } from "../Grid/grid";
-import CardTwo from '../Cards/cardTwo'
+import CardTwo from '../Cards/cardTwo';
+import Log from "../Log/log";
+import LogItem from "../Log/logItem";
+import DeleteBtn from "../DeleteBtn/DeleteBtn";
 
 const CreateFoodLog = () => {
     const APP_ID = "799dea75";
@@ -34,6 +37,7 @@ const CreateFoodLog = () => {
         setSearch("")
     }
 
+   
     return (
         <Container>
             <Row>
@@ -43,7 +47,7 @@ const CreateFoodLog = () => {
                 <Col size="sm-5">
                     <div className="CreateFoodLog">
                         <form onSubmit={getSearch} className="search-form">
-                            <input className="search-bar" type="text"  placeholder="What did you eat today..." value={search} onChange={updateSearch} />
+                            <input className="search-bar" type="text" placeholder="What did you eat today..." value={search} onChange={updateSearch} />
                             <button className="search-button" type="submit">
                                 Search
                              </button>
@@ -71,6 +75,21 @@ const CreateFoodLog = () => {
                 <Col size="sm-5">
                     <div id="white">
                         <h3>Food Log</h3>
+                        {nutrition.length ? (
+                            <Log>
+                                {nutrition.map(nutrients => (
+                                    <LogItem key={nutrients._id}>
+                                            <strong>
+                                                {nutrients.food.label} Calories {nutrients.food.label.ENERC_KCAL}
+                                            </strong>
+                                    
+                                        <DeleteBtn />
+                                    </LogItem>
+                                ))}
+                            </Log>
+                        ) : (
+                                <h3>No Results to Display</h3>
+                            )}
 
                     </div>
                 </Col>

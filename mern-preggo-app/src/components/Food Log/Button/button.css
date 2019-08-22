@@ -1,0 +1,9 @@
+.btn {
+    
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}

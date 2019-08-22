@@ -1,5 +1,6 @@
 import React from "react";
 import './create-foodlog.css'
+import FormBtn from "./Button/button"
 // import axios from 'axios';
 
 const NutritionInfo = ({title,calories,carbs,protein,fiber,fat}) => {
@@ -24,8 +25,7 @@ const NutritionInfo = ({title,calories,carbs,protein,fiber,fat}) => {
             <p>Protein: {protein}</p>
             <p>Fiber: {fiber}</p>
             <p>Fat: {fat}</p>
-            <button className="AddLog"> +
-             </button>
+            <FormBtn>+</FormBtn>
         </div>
         
     );
