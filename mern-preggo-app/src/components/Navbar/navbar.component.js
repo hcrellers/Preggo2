@@ -8,7 +8,7 @@ export default class Navbar extends Component {
   render() {
     return (
       
-      <nav className="navbar navbar-expand-sm bg-light justify-content-center">
+      <nav id="navbar" className="navbar navbar-expand-lg">
         <Link to="/" className="navbar-brand">Preggo</Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">

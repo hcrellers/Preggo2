@@ -11,12 +11,12 @@ import CreateFoodLog from "./components/Food Log/create-foodlog.component";
 function App() {
   return (
     <Router>
-      <div>
+      
         <Navbar />
         <div className="container">
           <Route path="/" exact component={Guidelines} />
           <Route path="/create" component={CreateFoodLog} />
-        </div>
+        
       </div>
     </Router>
   );

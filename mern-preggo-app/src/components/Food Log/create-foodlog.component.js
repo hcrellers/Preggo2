@@ -65,15 +65,16 @@ const CreateFoodLog = () => {
                         </div>
                     </div>
                 </Col>
-        
-                            
-            
-                <Col size="sm-5">
-                    <h3>Food Log</h3>
-                    
 
+
+
+                <Col size="sm-5">
+                    <div id="white">
+                        <h3>Food Log</h3>
+
+                    </div>
                 </Col>
-               
+
             </Row >
         </Container >
     );

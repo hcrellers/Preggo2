@@ -16,13 +16,13 @@ export default class Guidelines extends Component {
                 </Row>
                 <Row>
                     <Col size="sm-6">
-                        <div>
+                        <div id="white">
                             <h3>Physical Activity</h3>
                             <p>Staying active during pregnancy is important to maintain weight and help maintain strength for labor.</p>
                             <p>2 hours a week are recommended or 30 mintues every day. Walking, swimming, and yoga are great for pregnancy.</p>
                             <p>Defintely talk with your doctor before commiting to any routine to see what is best for your needs and abilities.</p>
                         </div>
-                        <div>
+                        <div id="white">
                             <h3>BMI Calculator</h3>
                             <p>To check your BMI go to the link listed below.</p>
                             <a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/english_bmi_calculator/bmi_calculator.html" target="_blank">Visit CDC.Gov</a>
@@ -38,7 +38,7 @@ export default class Guidelines extends Component {
                     </Col>
 
                     <Col size="sm-6">
-                        <div>
+                        <div id="white">
                             <h3>Calories</h3>
                             <p>Figure out how many calories you're supposed to intake regularly based on your age, weight, and activty level below</p>
                             <a href="https://health.gov/dietaryguidelines/2015/guidelines/appendix-2/" target="_blank">Visit Health.Gov</a>
