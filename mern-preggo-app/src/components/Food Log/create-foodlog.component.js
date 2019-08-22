@@ -80,7 +80,7 @@ const CreateFoodLog = () => {
                                 {nutrition.map(nutrients => (
                                     <LogItem key={nutrients._id}>
                                             <strong>
-                                                {nutrients.food.label} Calories {nutrients.food.label.ENERC_KCAL}
+                                                {nutrients.food.label} Calories {nutrients.food.nutrients.ENERC_KCAL}
                                             </strong>
                                     
                                         <DeleteBtn />
