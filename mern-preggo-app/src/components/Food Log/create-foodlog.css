@@ -15,10 +15,10 @@
 
 .indiResults {
     padding: 5px;
-    border: 2px solid #00ecbc;
+    border: 2px solid white;
     border-radius: 5px;
     margin: 10px;
-    box-shadow: 0px 5px 20px rgb(124, 120, 129);
+    box-shadow: 0px 5px 10px rgb(124, 120, 129);
     display: left;
     background: white;
 

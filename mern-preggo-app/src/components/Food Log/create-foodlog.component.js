@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Nutrition from "./nutrition.component";
 import './create-foodlog.css'
 import { Container, Row, Col } from "../Grid/grid";
+import CardTwo from '../Cards/cardTwo'
 
 const CreateFoodLog = () => {
     const APP_ID = "799dea75";
@@ -35,6 +36,9 @@ const CreateFoodLog = () => {
 
     return (
         <Container>
+            <Row>
+                <CardTwo />
+            </Row>
             <Row>
                 <Col size="sm-5">
                     <div className="CreateFoodLog">

@@ -1,18 +1,13 @@
 body, html {
-  height: 100%;
+  height: 200%;
+ 
 }
-#root {
-  /* The image used */
-  background-image: url("/mern-preggo-app/src/images/background.jpg");
 
-  /* Full height */
-  height: 100%;
+/* #root {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+} */
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 *{box-sizing: border-box}
 
@@ -53,22 +48,12 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
 
 /* Add padding to container elements */
-.container {
-  padding: 16px;
-}
+/* .container {
+ 
+} */
 
 /* Clear floats */
 .clearfix::after {
@@ -77,25 +62,3 @@ button:hover {
   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
-}
-
-/* 
-
-.App {
-  text-align: center;
-}
-
-
-
-.App-link {
-  color: #61dafb;
-} */
-
-/* .navbar {
-  color: #0c5b64;
-} */

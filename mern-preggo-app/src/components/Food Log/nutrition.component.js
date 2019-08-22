@@ -1,6 +1,6 @@
 import React from "react";
 import './create-foodlog.css'
-import axios from 'axios';
+// import axios from 'axios';
 
 const NutritionInfo = ({title,calories,carbs,protein,fiber,fat}) => {
 
