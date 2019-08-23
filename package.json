@@ -1,19 +1,33 @@
 {
-  "name": "preggo2",
-  "version": "1.0.0",
-  "description": "A nutrition app for pregnant women.",
-  "main": "index.js",
+  "name": "mern-preggo-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hcrellers/Preggo2.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hcrellers/Preggo2/issues"
-  },
-  "homepage": "https://github.com/hcrellers/Preggo2#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
