@@ -1,0 +1,19 @@
+{
+  "name": "preggo2",
+  "version": "1.0.0",
+  "description": "A nutrition app for pregnant women.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcrellers/Preggo2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcrellers/Preggo2/issues"
+  },
+  "homepage": "https://github.com/hcrellers/Preggo2#readme"
+}

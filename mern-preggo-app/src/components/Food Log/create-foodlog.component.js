@@ -7,6 +7,8 @@ import Log from "../Log/log";
 import LogItem from "../Log/logItem";
 import DeleteBtn from "../DeleteBtn/DeleteBtn";
 
+
+
 const CreateFoodLog = () => {
     const APP_ID = "799dea75";
     const APP_KEY = "e806ed0b36e74af63bf3578a2565f6ef";

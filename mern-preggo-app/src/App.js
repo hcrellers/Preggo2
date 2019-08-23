@@ -11,7 +11,6 @@ import Footer from "./components/Footer/footer"
 function App() {
   return (
     <Router>
-      
         <Navbar />
         <div className="container">
           <Route path="/" exact component={Guidelines} />
